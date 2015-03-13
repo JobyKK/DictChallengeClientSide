@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TestView">
+   <children>
+      <Label layoutX="494.0" layoutY="38.0" text="Words left" />
+      <TextField fx:id="txtCount" editable="false" layoutX="504.0" layoutY="62.0" prefHeight="25.0" prefWidth="47.0" />
+      <Pane layoutX="97.0" layoutY="283.0" prefHeight="81.0" prefWidth="431.0">
+         <children>
+            <Button fx:id="btnNext" layoutX="62.0" layoutY="16.0" mnemonicParsing="false" onAction="#nextWord" prefHeight="49.0" prefWidth="96.0" text="Next" />
+            <Button fx:id="btnSubmit" layoutX="269.0" layoutY="15.0" mnemonicParsing="false" onAction="#submitWord" prefHeight="49.0" prefWidth="96.0" text="Submit" />
+         </children>
+      </Pane>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="225.0" layoutY="191.0" prefHeight="26.0" prefWidth="178.0" text="TRANSLATION" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <padding>
+            <Insets top="7.0" />
+         </padding>
+      </Label>
+      <TextArea fx:id="txtWord" editable="false" layoutX="205.0" layoutY="135.0" prefHeight="33.0" prefWidth="215.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextArea>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="223.0" layoutY="97.0" prefHeight="26.0" prefWidth="178.0" text="WORD" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <padding>
+            <Insets top="7.0" />
+         </padding>
+      </Label>
+      <TextArea fx:id="txtTranslation" layoutX="207.0" layoutY="224.0" prefHeight="33.0" prefWidth="215.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </TextArea>
+      <TextField fx:id="txtPrevWord" editable="false" layoutX="176.0" layoutY="72.0" prefHeight="25.0" prefWidth="137.0" />
+      <TextField fx:id="txtPrevTranslation" editable="false" layoutX="313.0" layoutY="72.0" prefHeight="25.0" prefWidth="137.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="224.0" layoutY="38.0" prefHeight="26.0" prefWidth="178.0" text="PREVIOUS TUPLE" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <padding>
+            <Insets top="7.0" />
+         </padding>
+      </Label>
+   </children>
+</AnchorPane>
