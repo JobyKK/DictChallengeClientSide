@@ -2,6 +2,7 @@ package logic;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
+import java.net.InetAddress;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 
@@ -32,9 +33,15 @@ public class Program {
 	/**Test connection with Internet
 	 * used in connection settings*/
 	public static boolean checkConnection(){
-		try {
 			try {
-				URL url = new URL("http://www.google.com");
+				InetAddress[] addresses = InetAddress.getAllByName("www.google.com");
+				  for (InetAddress address : addresses) {
+				    if (address.isReachable(100)){
+				    	isConnectionToInternet = true;
+				    	return true;
+				    }
+				  }
+				/*URL url = new URL("http://www.google.com");
 				//System.out.println(url.getHost());
 				HttpURLConnection con = (HttpURLConnection) url
 						.openConnection();
@@ -43,15 +50,11 @@ public class Program {
 					System.out.println("Connection established");
 					isConnectionToInternet = true;
 					return true;
-				}
+				}*/
 			} catch (Exception exception) {
 				System.out.println("No Connection");
 				isConnectionToInternet = false;
-				return false;
 			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 		return false;
 	}
 	

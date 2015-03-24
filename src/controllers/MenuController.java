@@ -39,7 +39,7 @@ public class MenuController implements Initializable{
 	}
 	@Override
 	public void initialize(java.net.URL arg0, java.util.ResourceBundle arg1) {
-		if(Program.isConnectedToInternet())
+		if(Program.isConnectedToInternet() && Program.user.isSignedIn())
 			lvStatistics.setItems(Program.getStatistics());
 	}
 	@FXML

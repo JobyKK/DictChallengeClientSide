@@ -25,8 +25,8 @@ import org.json.JSONObject;
 public class RequestUtil {
 
 	static String id;
-	static boolean isAvailableSession = false;
-	static public String connectionURL = "http://128.199.40.160:8080";
+	public  static boolean isAvailableSession = false;
+	public  static String connectionURL = "http://128.199.40.160:8080";//"http://localhost:8080";
 	
 	/**Created for user authentication in login procedure
 	 * @return true - if user is in the database*/
@@ -35,8 +35,6 @@ public class RequestUtil {
 		String charset = "UTF-8";
 		String url = connectionURL + "/WebTest/LoginServlet";
 		URL obj = new URL(url);
-		email = "123@m.com";
-		pwd = "123";
 		String query = String.format("email=%s&pwd=%s", 
 				email, 
 				pwd);
